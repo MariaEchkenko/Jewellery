@@ -13,11 +13,15 @@
 <body class="page-body">
   <h1 class="visually-hidden">Добро пожаловать на сайт компании "Jewellery"</h1>
   <header class="page-header">
-    <div class="page-header__wrapper page-header__wrapper--active">
+    <div class="page-header__wrapper">
       <div class="page-header__top">
         <form action="https://echo.htmlacademy.ru" method="post">
+          <label for="header-search" aria-label="Поиск по сайту">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+          </label>
           <input type="search" name="search" id="header-search" placeholder="Type here to search">
-          <label for="header-search" aria-label="Поиск по сайту"></label>
         </form>
         <button class="page-header__nav-toggle" type="button" aria-label="Открыть меню">
           <svg width="25" height="16" viewBox="0 0 25 18" fill="none">
@@ -25,7 +29,9 @@
           </svg>
         </button>
         <a class="page-header__logo">
-          <img src="img/logo.svg" width="66" height="66" alt="Jewellery. Логотип сайта">
+          <svg width="66" height="66" viewBox="0 0 66 66" fill="none">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
         </a>
         <div class="page-header__user-nav">
           <a class="page-header__link page-header__link--login" href="#">Login</a>
@@ -38,7 +44,7 @@
           </a>
         </div>
       </div>
-      <nav class="page-header__nav page-header__nav--opened">
+      <nav class="page-header__nav page-header__nav--closed">
         <ul class="page-header__nav-list">
           <li class="page-header__nav-item">
             <a class="page-header__nav-link" href="#">What’s new</a>
@@ -71,6 +77,8 @@
 
   <footer class="page-footer">
   </footer>
+
+  <script src="js/script.js"></script>
 
 </body>
 </html>
