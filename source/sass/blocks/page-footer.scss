@@ -1,0 +1,193 @@
+.page-footer {
+  color: $white;
+  background-color: #000000;
+}
+
+.page-footer__wrapper {
+  @include wrapper;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+  padding-bottom: 70px;
+
+  @media (max-width: 1023px) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+}
+
+.page-footer__inbox {
+  width: 500px;
+  margin-right: 20px;
+
+  @media (max-width: 1170px) {
+    width: 450px;
+  }
+
+  @media (max-width: 1023px) {
+    width: 560px;
+    margin-bottom: 50px;
+    margin-right: 0;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    max-width: 560px;
+  }
+}
+
+.page-footer__inbox h2 {
+  margin: 0;
+  margin-bottom: 25px;
+  font-family: "Cormorant Garamond", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: 0.03em;
+
+  @media (max-width: 767px) {
+    margin-bottom: 30px;
+    padding-right: 75px;
+  }
+}
+
+.page-footer__inbox p {
+  margin: 0;
+  margin-bottom: 40px;
+  color: $grey;
+
+  @media (max-width: 767px) {
+    padding-right: 60px;
+  }
+}
+
+.page-footer__inbox form {
+  position: relative;
+  display: flex;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    background-color: $white;
+  }
+}
+
+.page-footer__inbox input {
+  flex-grow: 1;
+  padding: 15px 0;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $white;
+  background-color: transparent;
+  border: none;
+
+  &::placeholder {
+    font-family: "Poppins", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: $grey;
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid $brown;
+  }
+}
+
+.page-footer__inbox button {
+  padding: 0;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: $white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: $brown;
+
+    svg {
+      stroke: $brown;
+    }
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.page-footer__inbox svg {
+  padding-left: 12px;
+  stroke: $white;
+}
+
+.page-footer__nav-list {
+  @include list-reset;
+  display: flex;
+
+  @media (max-width: 1023px) {
+    margin-right: 87px;
+  }
+}
+
+.page-footer__nav-block {
+  margin-right: 67px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (max-width: 1070px) {
+    margin-right: 30px;
+  }
+
+  @media (max-width: 1023px) {
+    margin-right: 87px;
+  }
+}
+
+.page-footer__nav-item,
+.page-footer__contacts-item {
+  margin-bottom: 30px;
+}
+
+.page-footer__nav-item a,
+.page-footer__contacts-item a {
+  font-weight: 500;
+  color: $white;
+
+  &:hover {
+    color: $brown;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.page-footer__contacts-list {
+  @include list-reset;
+}
+
+.page-footer__contacts-item svg {
+  margin-right: 15px;
+  fill: $white;
+}
+
+.page-footer__contacts-item:hover svg {
+  fill: $brown;
+}
+
+.page-footer__contacts-item:first-child svg {
+  margin-right: 18px;
+}

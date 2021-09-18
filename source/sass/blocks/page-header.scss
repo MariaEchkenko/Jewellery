@@ -1,23 +1,10 @@
 .page-header__wrapper {
-  max-width: 1170px;
-  margin: 0 auto;
+  @include wrapper;
   padding-top: 30px;
   text-align: center;
 
-  @media (max-width: 1200px) {
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-    box-sizing: border-box;
-  }
-
-  @media (max-width: 1023px) {
-    padding-left: 45px;
-    padding-right: 45px;
-  }
-
   @media (max-width: 767px) {
-    padding: 20px 15px 0;
+    padding-top: 20px;
   }
 
   &--active {
@@ -239,16 +226,14 @@
 }
 
 .page-header__nav-list {
+  @include list-reset;
   position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0;
-  padding: 0;
   padding-left: 10px;
-  list-style: none;
 
-  &::before {
+  /*&::before {
     position: absolute;
     content: "";
     width: 100vw;
@@ -258,7 +243,7 @@
     @media (max-width: 1023px) {
       display: none;
     }
-  }
+  }*/
 
   @media (max-width: 1023px) {
     width: 100%;
@@ -315,13 +300,11 @@
 }
 
 .page-header__tablet-list {
+  @include list-reset;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 0;
   margin-bottom: 25px;
-  padding: 0;
-  list-style: none;
 
   @media (max-width: 767px) {
     margin-bottom: 15px;
