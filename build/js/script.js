@@ -19,13 +19,13 @@ if (navToggle) {
   });
 }
 
-'use strict'
+'use strict';
 
 if (document.querySelector('.new-items')) {
   var slider = new Swiper('.swiper', {
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
+      nextEl: '.new-items__navigation-button--next',
+      prevEl: '.new-items__navigation-button--prev'
     },
 
     breakpoints: {

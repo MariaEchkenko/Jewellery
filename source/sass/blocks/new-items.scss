@@ -1,7 +1,5 @@
 .new-items__wrapper {
   @include wrapper;
-  //max-width: 1170px;
-  //margin: 0 auto;
   padding-top: 97px;
   text-align: center;
 }
@@ -21,7 +19,6 @@
 }
 
 .new-items__slider {
-  position: relative;
   width: 100%;
   box-sizing: border-box;
 }
@@ -63,16 +60,18 @@
 }
 
 .new-items__navigation {
-  position: absolute;
-  top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
 .new-items__navigation-button {
- // width: 29px;
- // height: 9px;
+  width: 29px;
+  height: 9px;
   border: none;
   background-color: transparent;
+
+  svg {
+    stroke: $brown;
+  }
 }

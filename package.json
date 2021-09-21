@@ -1,7 +1,7 @@
 {
-  "name": "smart-device",
+  "name": "jewellery",
   "version": "1.0.0",
-  "description": "Стартовый шаблон сборки Лиги А",
+  "description": "jewellery",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
@@ -23,7 +23,8 @@
     "stylelint": "13.7.2",
     "stylelint-config-htmlacademy": "0.1.4",
     "eslint": "4.16.0",
-    "eslint-config-htmlacademy": "0.4.x"
+    "eslint-config-htmlacademy": "0.4.x",
+    "swiper": "^6.7.1"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",

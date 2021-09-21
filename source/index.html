@@ -82,6 +82,20 @@
         <h2>New In</h2>
         <a class="new-items__link" href="#">Shop Now</a>
         <div class="new-items__slider swiper">
+
+          <div class="new-items__navigation">
+            <button class="new-items__navigation-button new-items__navigation-button--prev swiper-button-prev" aria-label="Назад">
+              <svg width="29" height="9" viewBox="0 0 29 9" fill="none">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </button>
+            <button class="new-items__navigation-button new-items__navigation-button--next swiper-button-next" aria-label="Вперед">
+              <svg width="29" height="9" viewBox="0 0 29 9" fill="none">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </button>
+          </div>
+
           <ul class="new-items__list swiper-wrapper">
             <li class="new-items__card swiper-slide">
               <a href="#">
@@ -170,14 +184,7 @@
           </ul>
           <!-- If we need pagination -->
           <div class="swiper-pagination"></div>
-
-          <!-- If we need navigation buttons -->
-          <div class="new-items__navigation">
-            <button class="new-items__navigation-button swiper-button-prev" aria-label="Назад"></button>
-            <button class="new-items__navigation-button swiper-button-next" aria-label="Вперед"></button>
-          </div>
-
-        </div>
+       </div>
       </div>
     </section>
   </main>
@@ -249,7 +256,7 @@
     </div>
   </footer>
 
-  <script src="js/vendor.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
 
 </body>
