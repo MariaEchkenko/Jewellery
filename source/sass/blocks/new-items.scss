@@ -2,20 +2,15 @@
   @include wrapper;
   padding-top: 97px;
   text-align: center;
+  margin-bottom: 47px
 }
 
 .new-items__wrapper h2 {
-  margin: 0;
-  padding: 35px 0;
-  font-family: "Cormorant Garamond", "Arial", sans-serif;
-  font-weight: bold;
-  font-size: 34px;
+  @include title;
 }
 
 .new-items__link {
-  font-weight: 500;
-  color: $black;
-  border-bottom: 1px solid $brown;
+  @include section-link;
 }
 
 .new-items__slider {

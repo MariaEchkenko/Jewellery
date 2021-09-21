@@ -35,3 +35,18 @@ $background-light: #f0eae4;
     padding-right: 15px;
   }
 }
+
+@mixin title {
+  margin: 0;
+  padding: 35px 0;
+  font-family: "Cormorant Garamond", "Georgia", serif;
+  font-weight: bold;
+  font-size: 34px;
+  letter-spacing: 0.03em;
+}
+
+@mixin section-link {
+  font-weight: 500;
+  color: $black;
+  border-bottom: 1px solid $brown;
+}
