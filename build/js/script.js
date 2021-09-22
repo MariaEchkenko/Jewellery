@@ -1,4 +1,19 @@
 'use strict';
+//FAQ-accordion
+
+(function () {
+  var accrodionElements = document.querySelectorAll('.questions__item');
+
+  if (accrodionElements) {
+    accrodionElements.forEach(function (elem) {
+      elem.addEventListener('click', function () {
+        elem.classList.toggle('questions__item--active');
+      });
+    });
+  }
+})();
+
+'use strict';
 var header = document.querySelector('.page-header__wrapper');
 var navMain = document.querySelector('.page-header__nav');
 var navToggle = document.querySelector('.page-header__nav-toggle');

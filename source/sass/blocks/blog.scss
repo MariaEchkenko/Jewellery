@@ -23,7 +23,6 @@
   @media (max-width: 767px) {
     padding-bottom: 30px;
   }
-
 }
 
 .blog__link,
@@ -32,10 +31,10 @@
 }
 
 .blog__list {
+  @include list-reset;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
-  @include list-reset;
   padding-top: 63px;
   padding-bottom: 60px;
 
@@ -43,10 +42,11 @@
     display: flex;
     flex-direction: column;
     gap: 0;
+    padding-bottom: 35px;
   }
 
   @media (max-width: 767px) {
-    padding-top: 55px;
+    padding-top: 50px;
   }
 }
 
