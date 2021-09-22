@@ -104,6 +104,10 @@
     outline: none;
     border-bottom: 1px solid $brown;
   }
+
+  @media (max-width: 500px) {
+    max-width: 150px;
+  }
 }
 
 .page-footer__inbox button {
