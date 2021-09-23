@@ -2,6 +2,10 @@
   @include wrapper;
   padding-top: 75px;
   text-align: center;
+
+  @media (max-width: 1023px) {
+    padding-top: 34px;
+  }
 }
 
 .blog h2 {

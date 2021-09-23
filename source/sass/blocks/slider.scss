@@ -9,16 +9,26 @@
   }
 
   @media (max-width: 1200px) {
-    width: calc(100vw - 90px);
+    width: calc(100vw - 90px);;
+  }
+
+  @media (max-width: 1023px) {
+    padding-top: 46px;
   }
 
   @media (max-width: 767px) {
     width: calc(100vw - 30px);
+    padding-top: 42px;
   }
 }
 
 .slider__wrapper h2 {
   @include title;
+  letter-spacing: normal;
+
+  @media (max-width: 767px) {
+    padding: 30px 0;
+  }
 }
 
 .slider__link {
@@ -28,7 +38,17 @@
 .slider__list {
   @include list-reset;
   padding-top: 60px;
-  margin-bottom: 30px;
+  margin-bottom: 42px;
+
+  @media (max-width: 1023px) {
+    padding-top: 50px;
+    margin-bottom: 35px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 45px;
+    margin-bottom: 30px;
+  }
 }
 
 .slider__item a {
@@ -40,6 +60,10 @@
   width: 100%;
   height: auto;
   margin-bottom: 22px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 15px;
+  }
 }
 
 .slider__item p {
@@ -51,4 +75,37 @@
 .slider__item span {
   font-weight: bold;
   font-size: 14px;
+}
+
+.slider__pagination {
+  display: flex;
+  justify-content: center;
+
+  .swiper-pagination-bullet {
+    padding: 6px;
+    font-weight: 500;
+    color: $grey;
+    cursor: pointer;
+
+    &:hover {
+      color: $brown;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    color: $black;
+    cursor: default;
+
+    &:hover {
+      color: $black;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
 }
