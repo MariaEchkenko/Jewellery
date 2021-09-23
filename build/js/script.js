@@ -1,5 +1,5 @@
 'use strict';
-//FAQ-accordion
+// FAQ-accordion
 
 (function () {
   var accrodionElements = document.querySelectorAll('.questions__item');
@@ -34,7 +34,6 @@ if (navToggle) {
   });
 }
 
-
 new Swiper('.swiper', {
   mousewheel: true,
   spaceBetween: 30,
@@ -54,6 +53,10 @@ new Swiper('.swiper', {
           return `<span class=" ${className} "> ${index + 1} </span>`;
         },
       },
+      navigation: {
+        prevEl: '.swiper-button-custom-prev',
+        nextEl: '.swiper-button-custom-next',
+      },
       slidesPerView: 4,
       slidesPerGroup: 4,
     },
@@ -69,10 +72,9 @@ new Swiper('.swiper', {
         clickable: true,
         type: 'custom',
         renderCustom: function (swiper, current, total) {
-          return `${current}  of  ${total}`;
+          return `${current} of ${total}`;
         },
       },
     },
   },
 });
-

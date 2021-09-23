@@ -1,4 +1,3 @@
-
 new Swiper('.swiper', {
   mousewheel: true,
   spaceBetween: 30,
@@ -33,10 +32,9 @@ new Swiper('.swiper', {
         clickable: true,
         type: 'custom',
         renderCustom: function (swiper, current, total) {
-          return `${current}  of  ${total}`;
+          return `${current} of ${total}`;
         },
       },
     },
   },
 });
-

@@ -1,5 +1,5 @@
 'use strict';
-//FAQ-accordion
+// FAQ-accordion
 
 (function () {
   var accrodionElements = document.querySelectorAll('.questions__item');
