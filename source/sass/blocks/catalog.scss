@@ -1,3 +1,156 @@
 .catalog__wrapper {
   @include wrapper;
+  display: flex;
+  padding-top: 80px;
+  padding-bottom: 75px;
+}
+
+.catalog__filter form {
+  min-width: 250px;
+  margin-right: 50px;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.catalog__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.catalog__item {
+  width: calc((100% - 60px)/3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  @media (max-width: 767px) {
+    width: calc((100% - 30px)/2);
+  }
+
+  &:nth-child(3n) {
+    margin-right: 30px;
+  }
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+.catalog__item a {
+  display: block;
+  height: 100%;
+  padding-bottom: 3px;
+  color: $black;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    box-shadow: 0 6px 12px $grey;
+  }
+}
+
+.catalog__item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 22px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 15px;
+  }
+}
+
+.catalog__item p {
+  margin: 0;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.catalog__item span {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.catalog__pagination {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog__pagination-list {
+  @include list-reset;
+  display: flex;
+  margin-right: 30px;
+
+  @media (max-width: 767px) {
+    margin: 0 auto;
+  }
+}
+
+.catalog__pagination-link {
+  font-weight: 500;
+  color: $black;
+
+  &:hover {
+    color: $brown;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &--prev {
+    cursor: default;
+
+    &:hover {
+      color: $black;
+      cursor: default;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.catalog__pagination-item {
+  margin-right: 3px;
+}
+
+.catalog__pagination-item a {
+  padding: 5px;
+  font-weight: 500;
+  color: $grey;
+
+  &:hover {
+    color: $brown;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.catalog__pagination-item--current a {
+  color: $black;
+
+  &:hover {
+    color: $black;
+    cursor: default;
+  }
+
+  &:active {
+    opacity: 1;
+  }
 }
