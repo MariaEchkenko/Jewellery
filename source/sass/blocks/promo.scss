@@ -26,11 +26,9 @@
 }
 
 .promo h2 {
-  margin: 0;
-  margin-top: 5px;
+  margin: 15px 0;
   font-weight: bold;
   font-size: 45px;
-  //line-height: 58px;
   text-transform: uppercase;
   letter-spacing: 0.03em;
 
@@ -40,7 +38,7 @@
 
   @media (max-width: 767px) {
     font-size: 38px;
-    margin-top: 10px;
+    margin: 15px 0 5px;
     padding-right: 0;
   }
 }
@@ -50,10 +48,15 @@
   font-weight: 400;
   font-size: 38px;
   line-height: 49px;
-  font-style: italic;
+  font-family: "Cormorant Garamond Italic", "Georgia", serif;
   margin-bottom: 0;
+
+  @media (max-width: 1023px) {
+    padding-right: 20px;
+  }
 
   @media (max-width: 767px) {
     font-size: 34px;
+    padding-right: 0;
   }
 }

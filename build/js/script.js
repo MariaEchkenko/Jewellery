@@ -18,6 +18,8 @@ var header = document.querySelector('.page-header__wrapper');
 var navMain = document.querySelector('.page-header__nav');
 var navToggle = document.querySelector('.page-header__nav-toggle');
 
+header.classList.remove('page-header__wrapper--nojs');
+
 if (navToggle) {
   navToggle.addEventListener('click', function () {
     if (navMain.classList.contains('page-header__nav--closed')) {
@@ -52,10 +54,6 @@ new Swiper('.swiper', {
         renderBullet: function (index, className) {
           return `<span class=" ${className} "> ${index + 1} </span>`;
         },
-      },
-      navigation: {
-        prevEl: '.swiper-button-custom-prev',
-        nextEl: '.swiper-button-custom-next',
       },
       slidesPerView: 4,
       slidesPerGroup: 4,
