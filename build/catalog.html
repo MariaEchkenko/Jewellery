@@ -79,8 +79,78 @@
     </section>
     <section class="catalog">
       <div class="catalog__wrapper">
-        <div class="catalog__filter">
-          <form></form>
+        <div class="catalog__filter filter">
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <fieldset class="filter__el filter__el--active filter__el--nojs">
+              <h3>Product</h3>
+              <ul class="filter__list">
+                <li class="filter__item">
+                  <input type="checkbox" name="necklaces" id="necklaces" checked="">
+                  <label for="necklaces">Necklaces</label>
+                </li>
+                <li class="filter__item">
+                  <input type="checkbox" name="chokers" id="chokers">
+                  <label for="chokers">Chokers</label>
+                </li>
+                <li class="filter__item">
+                  <input type="checkbox" name="rings" id="rings" checked="">
+                  <label for="rings">Rings</label>
+                </li>
+                <li class="filter__item">
+                  <input type="checkbox" name="earrings" id="earrings" checked="">
+                  <label for="earrings">Earrings</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter__el filter__el--nojs">
+              <h3>Material</h3>
+              <ul class="filter__list">
+                <li class="filter__item">
+                  <input type="checkbox" name="gold" id="gold" checked="">
+                  <label for="gold">Gold</label>
+                </li>
+                <li class="filter__item">
+                  <input type="checkbox" name="silver" id="silver">
+                  <label for="silver">Silver</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter__el filter__el--nojs">
+              <h3>Collection</h3>
+              <ul class="filter__list">
+                <li class="filter__item">
+                  <input type="checkbox" name="pink-flamingo" id="pink-flamingo" checked="">
+                  <label for="pink-flamingo">Pink flamingo</label>
+                </li>
+                <li class="filter__item">
+                  <input type="checkbox" name="dreams" id="dreams">
+                  <label for="dreams">Dreams</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter__el filter__el--active filter__el--nojs">
+              <h3>Price</h3>
+              <div class="filter__range">
+                <div class="filter__range-control">
+                  <div class="filter__scale">
+                    <div class="filter__bar"></div>
+                  </div>
+                  <div class="filter__toggle filter__toggle--min" tabindex="0"></div>
+                  <div class="filter__toggle filter__toggle--max" tabindex="0"></div>
+                </div>
+                <div class="filter__price-control">
+                  <label> $
+                    <input type="number" name="min-price" value="55">
+                  </label>
+                  <label> $
+                    <input type="number" name="max-price" value="155">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <button type="submit">Apply</button>
+            <button type="reset">Clear All</button>
+          </form>
         </div>
         <div class="catalog__products">
           <ul class="catalog__list">

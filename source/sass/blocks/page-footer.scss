@@ -47,7 +47,7 @@
 .page-footer__inbox h2 {
   @include title;
   padding: 0 0 22px;
-  letter-spacing: .023em;
+  letter-spacing: 0.023em;
   /*margin: 0;
   margin-bottom: 25px;
   font-family: "Cormorant Garamond", "Georgia", serif;
@@ -108,12 +108,7 @@
 
   &:focus {
     outline: none;
-    //border-bottom: 1px solid $brown;
   }
-
- /* @media (max-width: 500px) {
-    max-width: 150px;
-  }*/
 }
 
 .page-footer__inbox button {

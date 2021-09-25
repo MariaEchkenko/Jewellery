@@ -22,7 +22,7 @@
 }
 
 .catalog__item {
-  width: calc((100% - 60px)/3);
+  width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
   text-align: center;
@@ -32,15 +32,15 @@
   }
 
   @media (max-width: 767px) {
-    width: calc((100% - 30px)/2);
-  }
+    width: calc((100% - 30px) / 2);
 
-  &:nth-child(3n) {
-    margin-right: 30px;
-  }
+    &:nth-child(3n) {
+      margin-right: 30px;
+    }
 
-  &:nth-child(2n) {
-    margin-right: 0;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
   }
 }
 
