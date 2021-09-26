@@ -10,6 +10,14 @@
 
   &:last-of-type {
     margin-bottom: 10px;
+
+    @media (max-width: 1023px) {
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 767px) {
+      margin-bottom: 10px;
+    }
   }
 
   &::before {
@@ -23,10 +31,36 @@
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
+
+    @media (max-width: 1023px) {
+      width: 23px;
+      height: 12px;
+      right: 42px;
+      top: 42px;
+    }
+
+    @media (max-width: 767px) {
+      width: 20px;
+      height: 10px;
+      right: 20px;
+      top: 32px;
+    }
   }
 
   &--active::before {
     transform: rotate(180deg);
+  }
+
+  @media (max-width: 1023px) {
+    padding: 19px 21px 14px;
+    border: none;
+    border-bottom: 1px solid $brown;
+  }
+
+  @media (max-width: 767px) {
+    padding: 10px 21px 5px;
+    border: none;
+    border-bottom: 1px solid $brown;
   }
 }
 
@@ -42,18 +76,30 @@
   &:active {
     opacity: 0.7;
   }
+
+  @media (max-width: 1023px) {
+    font-size: 18px;
+  }
 }
 
 .filter__list {
   @include list-reset;
   display: none;
   padding: 5px 10px;
+
+  @media (max-width: 1023px) {
+     padding: 7px 15px;
+  }
 }
 
 .filter__item {
   position: relative;
   margin-bottom: 9px;
   padding-left: 25px;
+
+  @media (max-width: 1023px) {
+    margin-bottom: 17px;
+  }
 }
 
 .filter__item input {
@@ -75,6 +121,17 @@
     background-color: transparent;
     border: 1px solid $brown;
     box-sizing: border-box;
+
+    @media (max-width: 1023px) {
+      width: 18px;
+      height: 18px;
+      left: -5px;
+      top: 1px;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    font-size: 16px;
   }
 }
 
@@ -82,7 +139,7 @@
   background-color: $brown;
 }
 
-.filter button {
+.filter__form-button {
   width: 100%;
   margin-top: 25px;
   padding: 21px;
@@ -104,13 +161,27 @@
     opacity: 0.7;
   }
 
-  &:last-child {
+  &--reset {
     color: $black;
     background-color: transparent;
 
     &:hover {
       color: $white;
       background-color: $brown;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    &:not(:first-child) {
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &:not(:first-child) {
+      margin-top: 20px;
     }
   }
 }
@@ -125,6 +196,10 @@
   align-items: center;
   height: 16px;
   text-align: center;
+
+  @media (max-width: 1023px) {
+    height: 30px;
+  }
 }
 
 .filter__scale {
@@ -139,6 +214,14 @@
   width: 90px;
   height: 1px;
   background-color: $brown;
+
+  @media (max-width: 1023px) {
+    width: 180px;
+  }
+
+  @media (max-width: 767px) {
+    width: 120px;
+  }
 }
 
 .filter__toggle {
@@ -152,10 +235,32 @@
 
   &--min {
     left: 44px;
+
+    @media (max-width: 1023px) {
+      left: 55px;
+    }
+
+    @media (max-width: 767px) {
+      left: 12%;
+    }
   }
 
   &--max {
     left: 148px;
+
+    @media (max-width: 1023px) {
+      left: 231px;
+    }
+
+    @media (max-width: 767px) {
+      left: 73%;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    width: 18px;
+    height: 18px;
+    top: 7px;
   }
 }
 
@@ -163,6 +268,14 @@
   display: flex;
   justify-content: space-between;
   padding: 4px 11px 8px 37px;
+
+  @media (max-width: 1023px) {
+    padding: 0 112px 20px 45px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0 20px 17px 18px;
+  }
 }
 
 .filter__price-control label {
@@ -170,6 +283,10 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 130%;
+
+  @media (max-width: 1023px) {
+    font-size: 16px;
+  }
 }
 
 .filter__price-control input {
@@ -180,6 +297,10 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 130%;
+
+  @media (max-width: 1023px) {
+    font-size: 16px;
+  }
 }
 
 .filter__el--active .filter__list,
@@ -187,4 +308,43 @@
 .filter__el--active .filter__range,
 .filter__el--nojs .filter__range {
   display: block;
+}
+
+.filter__open-button {
+  display: none;
+
+  @media (max-width: 1023px) {
+    display: block;
+  }
+}
+
+.filter__close-button {
+  position: fixed;
+  top: 11px;
+  left: 407px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  background-color: #000000;
+  z-index: 30;
+
+  &:hover,
+  &:active {
+    border: 1px solid $brown;
+    background-color: $brown;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  svg {
+    fill: $white;
+  }
+
+  @media (max-width: 767px) {
+    top: 10%;
+    left: 273px;
+  }
 }
