@@ -2,39 +2,60 @@
 
 (function () {
   var popupButton = document.querySelector('.page-header__link--login');
+  var popupButtonTablet = document.querySelector('.page-header__tablet-login');
   var popup = document.querySelector('.popup');
   var popupWrapper = document.querySelector('.popup__wrapper');
-  // var popupSendButton = document.querySelector('.popup__button');
   var popupCloseButton = document.querySelector('.popup__button-close');
   var userMail = document.querySelector('#user-mail');
+  var navMain = document.querySelector('.page-header__nav');
+  var header = document.querySelector('.page-header__wrapper');
 
-  popupButton.addEventListener('click', function () {
-    popup.classList.remove('hidden');
-    document.body.classList.add('no-scroll');
-
-    userMail.focus();
-
-    localStorage.setItem('mail', userMail.value);
-
-    popupCloseButton.addEventListener('click', closePopup);
-
-    window.addEventListener('keydown', function (evt) {
-      if (evt.keyCode === 27) {
-        closePopupHandler();
-      }
+  if (popupButton) {
+    popupButton.addEventListener('click', function () {
+      openPopup();
+      localStorage.setItem('mail', userMail.value);
+      popupCloseButton.addEventListener('click', closePopup);
+      window.addEventListener('keydown', function (evt) {
+        if (evt.keyCode === 27) {
+          closePopupHandler();
+        }
+      });
+      popup.addEventListener('click', function (evt) {
+        if (evt.target !== popupWrapper) {
+          closePopupHandler();
+        }
+      });
     });
+  }
 
-    popup.addEventListener('click', function (evt) {
-      if (evt.target !== popupWrapper) {
-        closePopupHandler();
-      }
+  if (popupButtonTablet) {
+    popupButtonTablet.addEventListener('click', function () {
+      openPopup();
+      closeMenu();
+      localStorage.setItem('mail', userMail.value);
+      popupCloseButton.addEventListener('click', closePopup);
+      window.addEventListener('keydown', function (evt) {
+        if (evt.keyCode === 27) {
+          closePopupHandler();
+        }
+      });
+      popup.addEventListener('click', function (evt) {
+        if (evt.target !== popupWrapper) {
+          closePopupHandler();
+        }
+      });
     });
-
-  });
+  }
 
   popupWrapper.addEventListener('click', function (evt) {
     evt.stopPropagation();
   });
+
+  function openPopup() {
+    popup.classList.remove('hidden');
+    document.body.classList.add('no-scroll');
+    userMail.focus();
+  }
 
   function closePopup() {
     popup.classList.add('hidden');
@@ -46,6 +67,12 @@
     window.removeEventListener('keydown', closePopupHandler);
     popupCloseButton.removeEventListener('click', closePopupHandler);
     popupButton.removeEventListener('click', closePopupHandler);
+  }
+
+  function closeMenu() {
+    navMain.classList.add('page-header__nav--closed');
+    navMain.classList.remove('page-header__nav--opened');
+    header.classList.remove('page-header__wrapper--active');
   }
 
   /* Ловушка фокуса */
