@@ -48,13 +48,6 @@
   @include title;
   padding: 0 0 22px;
   letter-spacing: 0.023em;
-  /*margin: 0;
-  margin-bottom: 25px;
-  font-family: "Cormorant Garamond", "Georgia", serif;
-  font-weight: bold;
-  font-size: 34px;
-  line-height: 44px;
-  letter-spacing: 0.03em;*/
 
   @media (max-width: 767px) {
     line-height: 44px;
@@ -140,8 +133,7 @@
   stroke: $white;
 }
 
-.page-footer__nav-list {
-  @include list-reset;
+.page-footer__nav-block {
   display: flex;
   padding-right: 30px;
 
@@ -155,7 +147,8 @@
   }
 }
 
-.page-footer__nav-block {
+.page-footer__nav-list {
+  @include list-reset;
   margin-right: 67px;
 
   &:last-child {
