@@ -1,5 +1,6 @@
 'use strict';
 
+// Popup
 (function () {
   var popupButton = document.querySelector('.page-header__link--login');
   var popupButtonTablet = document.querySelector('.page-header__tablet-login');

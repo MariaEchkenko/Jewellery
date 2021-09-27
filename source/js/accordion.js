@@ -2,10 +2,10 @@
 // FAQ-accordion
 
 (function () {
-  var accrodionElements = document.querySelectorAll('.questions__item');
+  var accordionElements = document.querySelectorAll('.questions__item');
 
-  if (accrodionElements) {
-    accrodionElements.forEach(function (elem) {
+  if (accordionElements) {
+    accordionElements.forEach(function (elem) {
       elem.addEventListener('click', function () {
         elem.classList.toggle('questions__item--active');
       });
