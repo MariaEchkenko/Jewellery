@@ -33,8 +33,6 @@
       display: none;
     }
   }
-
-
 }
 
 .popup__wrapper {
@@ -45,7 +43,7 @@
   margin: auto;
   padding: 138px 45px 55px;
   background-color: $background-light;
-  box-shadow: 0px 5px 32px rgba(226, 221, 215, 0.24);
+  box-shadow: 0 5px 32px rgba(226, 221, 215, 0.24);
   box-sizing: border-box;
 
   @media (max-width: 1023px) {
@@ -168,23 +166,23 @@
   line-height: 21px;
   color: $grey;
 
-    a {
-      padding-right: 5px;
-      color: $black;
+  a {
+    padding-right: 5px;
+    color: $black;
 
-      &:hover {
-        color: $brown;
-      }
-
-      &:active {
-        opacity: 0.7;
-      }
+    &:hover {
+      color: $brown;
     }
 
-    p {
-      margin: 0;
-      margin-right: 5px;
+    &:active {
+      opacity: 0.7;
     }
+  }
+
+  p {
+    margin: 0;
+    margin-right: 5px;
+  }
 }
 
 .popup__button {
@@ -236,7 +234,7 @@
   content: "";
   position: absolute;
   top: 26px;
-  left: 18px;;
+  left: 18px;
   width: 18px;
   height: 2px;
   background-color: $black;
