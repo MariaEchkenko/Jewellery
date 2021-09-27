@@ -89,46 +89,31 @@ if (navToggle) {
   var popupButtonTablet = document.querySelector('.page-header__tablet-login');
   var popup = document.querySelector('.popup');
   var popupWrapper = document.querySelector('.popup__wrapper');
-  // var popupSendButton = document.querySelector('.popup__button');
   var popupCloseButton = document.querySelector('.popup__button-close');
   var userMail = document.querySelector('#user-mail');
   var navMain = document.querySelector('.page-header__nav');
   var header = document.querySelector('.page-header__wrapper');
 
   if (popupButton) {
-    popupButton.addEventListener('click', function () {
+    popupButton.addEventListener('click', function (evt) {
+      evt.preventDefault();
       openPopup();
       localStorage.setItem('mail', userMail.value);
       popupCloseButton.addEventListener('click', closePopup);
-      window.addEventListener('keydown', function (evt) {
-        if (evt.keyCode === 27) {
-          closePopupHandler();
-        }
-      });
-      popup.addEventListener('click', function (evt) {
-        if (evt.target !== popupWrapper) {
-          closePopupHandler();
-        }
-      });
+      onPopupEscKeydown();
+      onOverlayClick();
     });
   }
 
   if (popupButtonTablet) {
-    popupButtonTablet.addEventListener('click', function () {
+    popupButtonTablet.addEventListener('click', function (evt) {
+      evt.preventDefault();
       openPopup();
       closeMenu();
       localStorage.setItem('mail', userMail.value);
       popupCloseButton.addEventListener('click', closePopup);
-      window.addEventListener('keydown', function (evt) {
-        if (evt.keyCode === 27) {
-          closePopupHandler();
-        }
-      });
-      popup.addEventListener('click', function (evt) {
-        if (evt.target !== popupWrapper) {
-          closePopupHandler();
-        }
-      });
+      onPopupEscKeydown();
+      onOverlayClick();
     });
   }
 
@@ -145,6 +130,22 @@ if (navToggle) {
   function closePopup() {
     popup.classList.add('hidden');
     document.body.classList.remove('no-scroll');
+  }
+
+  function onPopupEscKeydown() {
+    window.addEventListener('keydown', function (evt) {
+      if (evt.keyCode === 27) {
+        closePopupHandler();
+      }
+    });
+  }
+
+  function onOverlayClick() {
+    popup.addEventListener('click', function (evt) {
+      if (evt.target !== popupWrapper) {
+        closePopupHandler();
+      }
+    });
   }
 
   function closePopupHandler() {
