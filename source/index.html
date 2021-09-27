@@ -429,6 +429,25 @@
     </div>
   </footer>
 
+  <section class="popup hidden">
+    <div class="popup__wrapper">
+      <h2>Log In</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <label for="user-mail" aria-label="Ваш email"></label>
+        <input type="email" name="user-mail" id="user-mail" placeholder="Your E-mail" required>
+        <label for="password" aria-label="Ваш пароль"></label>
+        <input type="password" name="password" id="password" placeholder="Password" required>
+        <a class="popup__link" href="#">Forgot your password?</a>
+        <button class="popup__button" type="submit">Log In</button>
+        <div class="popup__signup">
+          <p>Don’t have an account?</p>
+          <a href="#">Sign up</a>
+        </div>
+        <button class="popup__button-close" type="button" aria-label="Закрыть окно"></button>
+      </form>
+    </div>
+  </section>
+
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
 

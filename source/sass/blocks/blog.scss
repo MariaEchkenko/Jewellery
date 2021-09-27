@@ -85,7 +85,7 @@
   display: block;
 
   @media (max-width: 1200px) {
-    width: 50%;
+    width: 100%;
   }
 
   @media (max-width: 1023px) {
@@ -103,9 +103,9 @@
     width: 100%;
   }
 
-  @media (max-width: 1023px) {
+  /*@media (max-width: 1023px) {
     width: 50%;
-  }
+  }*/
 
   @media (max-width: 767px) {
     width: 100%;
@@ -128,7 +128,7 @@
   background-color: $background-light;
   box-sizing: border-box;
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1200px) {
     width: 50%;
   }
 
