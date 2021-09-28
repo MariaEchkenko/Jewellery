@@ -23,8 +23,7 @@
     "stylelint": "13.7.2",
     "stylelint-config-htmlacademy": "0.1.4",
     "eslint": "4.16.0",
-    "eslint-config-htmlacademy": "0.4.x",
-    "swiper": "^6.7.1"
+    "eslint-config-htmlacademy": "0.4.x"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
