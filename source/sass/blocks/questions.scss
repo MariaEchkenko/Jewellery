@@ -79,6 +79,10 @@
       top: 25px;
     }
   }
+
+  &--nojs::before {
+    display: none;
+  }
 }
 
 .questions__item--active::before {
@@ -136,6 +140,7 @@
   }
 }
 
-.questions__item--active p {
+.questions__item--active p,
+.questions__item--nojs p{
   display: block;
 }
