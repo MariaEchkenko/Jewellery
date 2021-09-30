@@ -90,6 +90,8 @@
   color: $white;
   background-color: transparent;
   border: none;
+  border-radius: 0;
+  -webkit-appearance: none;
 
   &::placeholder {
     font-family: "Poppins", "Arial", sans-serif;

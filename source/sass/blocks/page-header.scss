@@ -112,13 +112,15 @@
 }
 
 .page-header__top input {
-  border: none;
   padding: 10px;
   font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
   color: $black;
+  border: none;
+  border-radius: 0;
+  -webkit-appearance: none;
 
   &::placeholder {
     font-family: "Poppins", "Arial", sans-serif;

@@ -9,7 +9,7 @@
   }
 
   &:last-of-type {
-    margin-bottom: 10px;
+    margin-bottom: 35px;
 
     @media (max-width: 1023px) {
       margin-bottom: 16px;
@@ -73,6 +73,12 @@
     color: $brown;
   }
 
+  &:focus {
+    outline: none;
+    color: $brown;
+    border-bottom: 1px solid $black;
+  }
+
   &:active {
     opacity: 0.7;
   }
@@ -110,6 +116,16 @@
 .filter__item label {
   font-weight: 500;
   font-size: 14px;
+  cursor: pointer;
+
+  &:hover {
+    color: $brown;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 
   &::before {
     position: absolute;
@@ -139,13 +155,21 @@
   background-color: $brown;
 }
 
+.filter__item input:focus + label::before{
+  outline: 2px solid $black;
+}
+
 .filter__form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  min-height: 68px;
   margin-top: 25px;
-  padding: 21px;
   font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;
   font-size: 16px;
+  line-height: 21px;
   color: $white;
   border: 1px solid $brown;
   border-radius: none;
@@ -220,7 +244,8 @@
   }
 
   @media (max-width: 767px) {
-    width: 120px;
+    width: 62%;
+    left: 40px;
   }
 }
 
@@ -297,9 +322,21 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 130%;
+  -moz-appearance: textfield;
 
   @media (max-width: 1023px) {
     font-size: 16px;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &:hover,
+  &:focus {
+      appearance: none;
+      -moz-appearance: textfield;
   }
 }
 
@@ -321,7 +358,7 @@
 .filter__close-button {
   position: fixed;
   top: 11px;
-  left: 407px;
+  left: calc(50% + 210px);
   width: 32px;
   height: 32px;
   border: 1px solid #000000;
@@ -344,7 +381,10 @@
   }
 
   @media (max-width: 767px) {
-    top: 10%;
-    left: 273px;
+    top: 60px;
+  }
+
+  @media (max-width: 490px) {
+    left: calc(100% - 47px);
   }
 }

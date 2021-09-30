@@ -90,7 +90,8 @@
   transition: transform, 0.3s;
 }
 
-.questions__item:hover h3 {
+.questions__item:hover h3,
+.questions__item:focus h3 {
   color: $brown;
 }
 
