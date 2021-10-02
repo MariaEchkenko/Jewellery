@@ -36,10 +36,19 @@
 
   if (accordionButtons) {
     accordionButtons.forEach(function (button) {
-      button.addEventListener('click', function (evt) {
-        evt.target.parentNode.classList.toggle('filter__el--active');
-      });
+      button.addEventListener('click', classToggle);
+      button.addEventListener('keydown', onEnterKeydown);
     });
+  }
+
+  function classToggle(evt) {
+    evt.target.parentNode.classList.toggle('filter__el--active');
+  }
+
+  function onEnterKeydown(evt) {
+    if (evt.key === 'Enter' || evt.keyCode === 13) {
+      document.activeElement.parentNode.classList.toggle('filter__el--active');
+    }
   }
 })();
 

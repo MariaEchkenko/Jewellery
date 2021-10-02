@@ -1,7 +1,7 @@
 .filter__el {
   position: relative;
   margin: 0;
-  padding: 7px 25px 9px;
+  padding: 10px 25px 9px;
   border: 1px solid $brown;
 
   &:not(:first-child) {
@@ -52,13 +52,13 @@
   }
 
   @media (max-width: 1023px) {
-    padding: 19px 21px 14px;
+    padding: 19px 21px 24px;
     border: none;
     border-bottom: 1px solid $brown;
   }
 
   @media (max-width: 767px) {
-    padding: 10px 21px 5px;
+    padding: 9px 21px;
     border: none;
     border-bottom: 1px solid $brown;
   }
@@ -68,6 +68,7 @@
   font-weight: 500;
   font-size: 16px;
   cursor: pointer;
+  margin-bottom: 10px;
 
   &:hover {
     color: $brown;
@@ -86,6 +87,10 @@
   @media (max-width: 1023px) {
     font-size: 18px;
   }
+
+  @media (max-width: 767px) {
+    margin-bottom: 15px;
+  }
 }
 
 .filter__list {
@@ -100,23 +105,9 @@
 
 .filter__item {
   position: relative;
-  margin-bottom: 9px;
   padding-left: 25px;
-
-  @media (max-width: 1023px) {
-    margin-bottom: 17px;
-  }
-}
-
-.filter__item input {
-  position: absolute;
-  opacity: 0;
-}
-
-.filter__item label {
-  font-weight: 500;
-  font-size: 14px;
   cursor: pointer;
+  padding: 5px 0 5px 25px;
 
   &:hover {
     color: $brown;
@@ -127,11 +118,30 @@
     opacity: 0.7;
   }
 
+  @media (max-width: 1023px) {
+    margin-bottom: 7px;
+  }
+}
+
+.filter__item input {
+  position: absolute;
+  left: 7px;
+  opacity: 0;
+  cursor: pointer;
+
+}
+
+.filter__item label {
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+
+
   &::before {
     position: absolute;
     content: "";
     left: -3px;
-    top: 2px;
+    top: 8px;
     width: 15px;
     height: 15px;
     background-color: transparent;
@@ -142,7 +152,7 @@
       width: 18px;
       height: 18px;
       left: -5px;
-      top: 1px;
+      top: 6px;
     }
   }
 
@@ -218,8 +228,9 @@
   position: relative;
   display: flex;
   align-items: center;
-  height: 16px;
+  height: 24px;
   text-align: center;
+  padding-top: 10px;
 
   @media (max-width: 1023px) {
     height: 30px;
@@ -253,7 +264,7 @@
   position: absolute;
   width: 15px;
   height: 15px;
-  top: -1px;
+  //top: -1px;
   background-color: $brown;
   border-radius: 50%;
   cursor: pointer;
