@@ -12,13 +12,10 @@
       });
       elem.addEventListener('keydown', onEnterKeydown);
 
-      function onEnterKeydown() {
-        elem.addEventListener('keydown', function (evt) {
-          if (evt.key === 'Space' || evt.key === 'Enter') {
-            evt.preventDefault();
-            elem.classList.toggle('questions__item--active');
-          }
-        });
+      function onEnterKeydown(evt) {
+        if (evt.key === 'Enter' || evt.keyCode === 13) {
+          document.activeElement.classList.toggle('questions__item--active');
+        }
       }
     });
   }
